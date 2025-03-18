@@ -12,3 +12,7 @@ Welcome to PFT Bot! This is a side project aimed at creating a bot that manage l
 ## Result
 
 line @532fracq
+
+## Ref
+
+https://www.youtube.com/watch?v=pptesE3U0g4
