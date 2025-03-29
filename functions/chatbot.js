@@ -11,7 +11,7 @@ dayjs.tz.setDefault("Asia/Bangkok");
 
 const ledgerTransactions = require("./features/ledger/transactions");
 const ledgerSummary = require("./features/ledger/summary");
-const projectPSaid = require("./features/project-p/said");
+const perfect = require("./features/perfect/said");
 
 exports.chatbot = functions
   .region("asia-southeast1")
@@ -28,7 +28,7 @@ exports.chatbot = functions
     intentMap.set("Ledger - Summary - yes", (agent) =>
       ledgerSummary(agent, userId)
     );
-    intentMap.set("Project P", (agent) => projectPSaid(agent, userId));
+    intentMap.set("PerfecT", (agent) => perfect(agent, userId));
 
     agent.handleRequest(intentMap);
   });
