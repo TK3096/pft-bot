@@ -44,8 +44,24 @@ async function getMessages(docId) {
   }
 }
 
+async function getReminds() {
+  try {
+    const doc = await db.collection("reminds").get();
+
+    const data = [];
+    doc.forEach((doc) => {
+      data.push(doc.data());
+    });
+
+    return data;
+  } catch (error) {
+    console.log("[PERFECT/GET_REMIND]: ", error);
+  }
+}
+
 module.exports = {
   setLog,
   getLog,
   getMessages,
+  getReminds,
 };

@@ -1,6 +1,6 @@
 const perfectUtils = require("./utils");
 
-async function ProjectPSaid(agent, userId) {
+async function PerfectSaid(agent, userId) {
   const existing = await perfectUtils.getLog(userId);
 
   if (!existing) {
@@ -19,4 +19,4 @@ async function ProjectPSaid(agent, userId) {
   }
 }
 
-module.exports = ProjectPSaid;
+module.exports = PerfectSaid;
